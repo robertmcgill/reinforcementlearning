@@ -14,3 +14,10 @@ def randomCard():
 def useable_ace(hand):
     val, ace = hand
     return ((ace) and ((val + 10) <= 21))
+
+def totalValue(hand):
+    val, ace = hand
+    if (useable_ace(hand)):
+        return (val + 10)
+    else:
+        return val
